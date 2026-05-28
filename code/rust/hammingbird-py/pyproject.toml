@@ -1,0 +1,33 @@
+[build-system]
+requires = ["maturin>=1.5,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "hammingbird"
+version = "0.5.0"
+description = "The fastest exact Hamming-distance pair-search library on PyPI. Pigeonhole prefilter, Rust core, streaming Index with sub-µs query latency."
+authors = [{name = "Vico Bonfioli"}]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+keywords = ["hamming", "hash", "dedup", "near-duplicate", "perceptual-hash", "phash", "simhash", "binary-vectors", "ann"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Rust",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://github.com/ElVec1o/hammingbird"
+Repository = "https://github.com/ElVec1o/hammingbird"
+Documentation = "https://github.com/ElVec1o/hammingbird#readme"
+Issues = "https://github.com/ElVec1o/hammingbird/issues"
+
+[tool.maturin]
+module-name = "hammingbird._hammingbird"
+python-source = "python"
+features = ["pyo3/extension-module"]

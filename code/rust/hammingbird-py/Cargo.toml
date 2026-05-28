@@ -1,0 +1,18 @@
+[package]
+name = "hammingbird-py"
+version = "0.5.0"
+edition = "2021"
+description = "PyO3 bindings for hammingbird — the fastest exact Hamming-distance pair-search library on PyPI."
+license = "MIT"
+authors = ["Vico Bonfioli"]
+repository = "https://github.com/ElVec1o/hammingbird"
+homepage = "https://github.com/ElVec1o/hammingbird"
+
+[lib]
+name = "_hammingbird"
+crate-type = ["cdylib"]
+
+[dependencies]
+hammingbird-core = { path = "../hammingbird-core" }
+pyo3 = { version = "0.22", features = ["extension-module", "abi3-py39"] }
+numpy = "0.22"

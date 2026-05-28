@@ -1,0 +1,42 @@
+# Build artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.dylib
+*.egg-info/
+
+# Rust build
+code/rust/target/
+
+# macOS
+.DS_Store
+._*
+
+# Python virtualenvs
+.venv/
+venv/
+env/
+
+# Streamlit cache
+.streamlit/
+
+# Tarballs / temp
+_tmp_unzip/
+*.zip
+*.tar.gz
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Regeneratable test fixtures (regen via code/rust/dump_*.py)
+code/rust/_data/
+
+# Pre-computed pHash binary blobs (regen via code/experiments/gen_real_phashes.py)
+code/experiments/_real_data/
+
+# Internal-only directory (not for public repo)
+internal/

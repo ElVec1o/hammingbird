@@ -1,0 +1,16 @@
+[package]
+name = "hammingbird-core"
+version = "0.5.0"
+edition = "2021"
+description = "Pigeonhole-prefilter core for exact Hamming-distance pair search on binary vectors."
+license = "MIT"
+authors = ["Vico Bonfioli"]
+repository = "https://github.com/ElVec1o/hammingbird"
+homepage = "https://github.com/ElVec1o/hammingbird"
+keywords = ["hamming", "dedup", "binary", "near-duplicate", "pigeonhole"]
+categories = ["algorithms"]
+
+[dependencies]
+hashbrown = "0.15"
+rustc-hash = "2"
+rayon = "1.10"
