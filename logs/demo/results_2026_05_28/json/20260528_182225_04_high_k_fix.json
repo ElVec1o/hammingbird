@@ -1,0 +1,127 @@
+{
+  "timestamp_utc": "2026-05-28T11:22:25+00:00",
+  "preset_id": "04_high_k_fix",
+  "machine": {
+    "platform": "macOS-26.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.12.8"
+  },
+  "config": {
+    "dataset": "Synthetic \u2014 uniform random",
+    "n": 50000,
+    "d_bits": 256,
+    "k_values": [
+      12,
+      16,
+      20
+    ],
+    "methods": [
+      "pigeon \u2014 find_pairs_self (byte-aligned)",
+      "pigeon \u2014 find_pairs_self_bit (bit-aligned)",
+      "FAISS IndexBinaryFlat (brute force, exact)"
+    ],
+    "estimated_memory_mb": 254.6
+  },
+  "results": [
+    {
+      "method": "pigeon \u2014 find_pairs_self (byte-aligned)",
+      "category": "exact",
+      "time_s": 0.02299,
+      "pairs": 0,
+      "n": 50000,
+      "d_bits": 256,
+      "k": 12,
+      "extra": {},
+      "recall_vs_truth": null
+    },
+    {
+      "method": "pigeon \u2014 find_pairs_self_bit (bit-aligned)",
+      "category": "exact",
+      "time_s": 0.020314,
+      "pairs": 0,
+      "n": 50000,
+      "d_bits": 256,
+      "k": 12,
+      "extra": {},
+      "recall_vs_truth": null
+    },
+    {
+      "method": "FAISS IndexBinaryFlat (brute force, exact)",
+      "category": "exact",
+      "time_s": 0.380865,
+      "pairs": 0,
+      "n": 50000,
+      "d_bits": 256,
+      "k": 12,
+      "extra": {},
+      "recall_vs_truth": null
+    },
+    {
+      "method": "pigeon \u2014 find_pairs_self (byte-aligned)",
+      "category": "exact",
+      "time_s": 0.032396,
+      "pairs": 0,
+      "n": 50000,
+      "d_bits": 256,
+      "k": 16,
+      "extra": {},
+      "recall_vs_truth": null
+    },
+    {
+      "method": "pigeon \u2014 find_pairs_self_bit (bit-aligned)",
+      "category": "exact",
+      "time_s": 0.012807,
+      "pairs": 0,
+      "n": 50000,
+      "d_bits": 256,
+      "k": 16,
+      "extra": {},
+      "recall_vs_truth": null
+    },
+    {
+      "method": "FAISS IndexBinaryFlat (brute force, exact)",
+      "category": "exact",
+      "time_s": 0.389977,
+      "pairs": 0,
+      "n": 50000,
+      "d_bits": 256,
+      "k": 16,
+      "extra": {},
+      "recall_vs_truth": null
+    },
+    {
+      "method": "pigeon \u2014 find_pairs_self (byte-aligned)",
+      "category": "exact",
+      "time_s": 0.108489,
+      "pairs": 0,
+      "n": 50000,
+      "d_bits": 256,
+      "k": 20,
+      "extra": {},
+      "recall_vs_truth": null
+    },
+    {
+      "method": "pigeon \u2014 find_pairs_self_bit (bit-aligned)",
+      "category": "exact",
+      "time_s": 0.024515,
+      "pairs": 0,
+      "n": 50000,
+      "d_bits": 256,
+      "k": 20,
+      "extra": {},
+      "recall_vs_truth": null
+    },
+    {
+      "method": "FAISS IndexBinaryFlat (brute force, exact)",
+      "category": "exact",
+      "time_s": 0.385825,
+      "pairs": 0,
+      "n": 50000,
+      "d_bits": 256,
+      "k": 20,
+      "extra": {},
+      "recall_vs_truth": null
+    }
+  ]
+}

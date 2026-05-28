@@ -1,0 +1,71 @@
+{
+  "timestamp_utc": "2026-05-28T11:22:07+00:00",
+  "preset_id": "03_adaptive_structured",
+  "machine": {
+    "platform": "macOS-26.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.12.8"
+  },
+  "config": {
+    "dataset": "Synthetic \u2014 low-entropy (adversarial)",
+    "n": 20000,
+    "d_bits": 256,
+    "k_values": [
+      4
+    ],
+    "methods": [
+      "pigeon \u2014 find_pairs_self (byte-aligned)",
+      "pigeon \u2014 find_pairs_self_bit (bit-aligned)",
+      "pigeon \u2014 find_pairs_self_adaptive (entropy)",
+      "FAISS IndexBinaryFlat (brute force, exact)"
+    ],
+    "estimated_memory_mb": 206.6
+  },
+  "results": [
+    {
+      "method": "pigeon \u2014 find_pairs_self (byte-aligned)",
+      "category": "exact",
+      "time_s": 2.124601,
+      "pairs": 0,
+      "n": 20000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {},
+      "recall_vs_truth": null
+    },
+    {
+      "method": "pigeon \u2014 find_pairs_self_bit (bit-aligned)",
+      "category": "exact",
+      "time_s": 0.78743,
+      "pairs": 0,
+      "n": 20000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {},
+      "recall_vs_truth": null
+    },
+    {
+      "method": "pigeon \u2014 find_pairs_self_adaptive (entropy)",
+      "category": "exact",
+      "time_s": 0.004849,
+      "pairs": 0,
+      "n": 20000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {},
+      "recall_vs_truth": null
+    },
+    {
+      "method": "FAISS IndexBinaryFlat (brute force, exact)",
+      "category": "exact",
+      "time_s": 0.07748,
+      "pairs": 0,
+      "n": 20000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {},
+      "recall_vs_truth": null
+    }
+  ]
+}

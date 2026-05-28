@@ -1,0 +1,31 @@
+dataset,n,d_bits,k,method,category,time_s,pairs,recall_vs_truth,extra
+Synthetic — uniform random,100000,256,2,pigeon — find_pairs_self (byte-aligned),exact,0.020585,0,,{}
+Synthetic — uniform random,100000,256,2,"FAISS IndexBinaryFlat (brute force, exact)",exact,1.531861,0,,{}
+Synthetic — uniform random,100000,256,2,"FAISS IndexBinaryMultiHash (exact, nflip=0)",exact,0.063604,0,,{'nflip': 0}
+Synthetic — uniform random,500000,256,2,pigeon — find_pairs_self (byte-aligned),exact,0.06019,0,,{}
+Synthetic — uniform random,500000,256,2,"FAISS IndexBinaryFlat (brute force, exact)",exact,38.851507,0,,{}
+Synthetic — uniform random,500000,256,2,"FAISS IndexBinaryMultiHash (exact, nflip=0)",exact,0.611162,0,,{'nflip': 0}
+Synthetic — uniform random,1000000,256,2,pigeon — find_pairs_self (byte-aligned),exact,0.160308,0,,{}
+Synthetic — uniform random,1000000,256,2,"FAISS IndexBinaryFlat (brute force, exact)",exact,194.837699,0,,{}
+Synthetic — uniform random,1000000,256,2,"FAISS IndexBinaryMultiHash (exact, nflip=0)",exact,1.360515,0,,{'nflip': 0}
+"Real — CIFAR-10 pHashes (64-bit, fixed)",50000,64,2,pigeon — find_pairs_self (byte-aligned),exact,0.012784,110,1.0,{}
+"Real — CIFAR-10 pHashes (64-bit, fixed)",50000,64,2,pigeon — find_pairs_self_bit (bit-aligned),exact,0.008488,110,1.0,{}
+"Real — CIFAR-10 pHashes (64-bit, fixed)",50000,64,2,"FAISS IndexBinaryFlat (brute force, exact)",exact,0.317529,110,1.0,{}
+"Real — CIFAR-10 pHashes (64-bit, fixed)",50000,64,2,"FAISS IndexBinaryMultiHash (exact, nflip=0)",exact,0.026533,110,1.0,{'nflip': 0}
+"Real — CIFAR-10 pHashes (64-bit, fixed)",50000,64,2,"usearch HNSW (binary, approximate)",approximate-default,1.431332,110,1.0,{}
+"Real — CIFAR-10 pHashes (64-bit, fixed)",50000,64,2,"Annoy (random projection, approximate)",approximate-default,4.130972,110,1.0,{'trees': 10}
+"Real — CIFAR-10 pHashes (64-bit, fixed)",50000,64,4,pigeon — find_pairs_self (byte-aligned),exact,0.041979,277,1.0,{}
+"Real — CIFAR-10 pHashes (64-bit, fixed)",50000,64,4,pigeon — find_pairs_self_bit (bit-aligned),exact,0.006903,277,1.0,{}
+"Real — CIFAR-10 pHashes (64-bit, fixed)",50000,64,4,"FAISS IndexBinaryFlat (brute force, exact)",exact,0.315384,277,1.0,{}
+"Real — CIFAR-10 pHashes (64-bit, fixed)",50000,64,4,"FAISS IndexBinaryMultiHash (exact, nflip=0)",exact,0.056374,277,1.0,{'nflip': 0}
+"Real — CIFAR-10 pHashes (64-bit, fixed)",50000,64,4,"usearch HNSW (binary, approximate)",approximate-default,1.272336,277,1.0,{}
+"Real — CIFAR-10 pHashes (64-bit, fixed)",50000,64,4,"Annoy (random projection, approximate)",approximate-default,4.151945,277,1.0,{'trees': 10}
+Synthetic — clustered (real-world shape),100000,256,4,pigeon — find_pairs_self (byte-aligned),exact,0.04066,162111,1.0,{}
+Synthetic — clustered (real-world shape),100000,256,4,pigeon — find_pairs_self_bit (bit-aligned),exact,0.03455,162111,1.0,{}
+Synthetic — clustered (real-world shape),100000,256,4,"FAISS IndexBinaryFlat (brute force, exact)",exact,1.559765,162111,1.0,{}
+Synthetic — clustered (real-world shape),100000,256,4,"FAISS IndexBinaryMultiHash (exact, nflip=0)",exact,0.232911,162111,1.0,{'nflip': 0}
+Synthetic — clustered (real-world shape),100000,256,4,"FAISS IndexBinaryHash (LSH, approximate)",approximate-default,0.061409,127047,0.7837,{}
+Synthetic — clustered (real-world shape),100000,256,4,"usearch HNSW (binary, approximate)",approximate-default,2.716791,117076,0.7222,{}
+Synthetic — clustered (real-world shape),100000,256,4,"Annoy (random projection, approximate)",approximate-default,6.407301,90608,0.5589,{'trees': 10}
+Synthetic — uniform random,2000000,256,2,pigeon — find_pairs_self (byte-aligned),exact,0.312002,0,,{}
+Synthetic — uniform random,2000000,256,2,"FAISS IndexBinaryFlat (brute force, exact)",exact,919.335508,0,,{}

@@ -1,0 +1,108 @@
+{
+  "timestamp_utc": "2026-05-28T12:31:01+00:00",
+  "preset_id": "12_ann_tuned_high_recall",
+  "machine": {
+    "platform": "macOS-26.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.12.8"
+  },
+  "config": {
+    "dataset": "Synthetic \u2014 clustered (real-world shape)",
+    "n_values": [
+      200000
+    ],
+    "d_bits": 256,
+    "k_values": [
+      4
+    ],
+    "methods": [
+      "pigeon \u2014 find_pairs_self_bit (bit-aligned)",
+      "FAISS IndexBinaryFlat (brute force, exact)",
+      "FAISS MultiHash TUNED (nflip=2)",
+      "FAISS LSH TUNED (nflip=4)",
+      "usearch HNSW TUNED (ef=256, count=200)",
+      "Annoy TUNED (50 trees, search_k=10k)"
+    ],
+    "estimated_memory_mb": 304.1,
+    "total_elapsed_s": 282.78
+  },
+  "results": [
+    {
+      "method": "pigeon \u2014 find_pairs_self_bit (bit-aligned)",
+      "category": "exact",
+      "time_s": 0.105318,
+      "pairs": 649382,
+      "n": 200000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {},
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "FAISS IndexBinaryFlat (brute force, exact)",
+      "category": "exact",
+      "time_s": 6.042916,
+      "pairs": 649382,
+      "n": 200000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {},
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "FAISS MultiHash TUNED (nflip=2)",
+      "category": "approximate-tunable",
+      "time_s": 4.734068,
+      "pairs": 649382,
+      "n": 200000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {
+        "nflip": 2
+      },
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "FAISS LSH TUNED (nflip=4)",
+      "category": "approximate-tunable",
+      "time_s": 2.07616,
+      "pairs": 649382,
+      "n": 200000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {
+        "nflip": 4
+      },
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "usearch HNSW TUNED (ef=256, count=200)",
+      "category": "approximate-tunable",
+      "time_s": 20.185834,
+      "pairs": 615750,
+      "n": 200000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {
+        "ef_search": 256,
+        "count": 200
+      },
+      "recall_vs_truth": 0.9482
+    },
+    {
+      "method": "Annoy TUNED (50 trees, search_k=10k)",
+      "category": "approximate-tunable",
+      "time_s": 248.914181,
+      "pairs": 616164,
+      "n": 200000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {
+        "trees": 50,
+        "search_k": 10000
+      },
+      "recall_vs_truth": 0.9488
+    }
+  ]
+}

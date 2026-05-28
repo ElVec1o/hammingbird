@@ -1,0 +1,98 @@
+{
+  "timestamp_utc": "2026-05-28T14:10:55+00:00",
+  "preset_id": "rayon_thread_sweep",
+  "machine": {
+    "platform": "macOS-26.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.12.8"
+  },
+  "config": {
+    "n": 1000000,
+    "d_bits": 256,
+    "k": 8,
+    "reps": 3,
+    "thread_counts": [
+      1,
+      2,
+      4,
+      6,
+      8,
+      10
+    ]
+  },
+  "results": [
+    {
+      "threads": 1,
+      "n": 1000000,
+      "d_bits": 256,
+      "k": 8,
+      "reps": 3,
+      "median_s": 0.5796221249984228,
+      "best_s": 0.5760382079970441,
+      "worst_s": 0.5845764999976382,
+      "subprocess_overhead_s": 0.66,
+      "pigeon_version": "0.4.4"
+    },
+    {
+      "threads": 2,
+      "n": 1000000,
+      "d_bits": 256,
+      "k": 8,
+      "reps": 3,
+      "median_s": 0.3615297919968725,
+      "best_s": 0.35514633300044807,
+      "worst_s": 0.36771745800069766,
+      "subprocess_overhead_s": 0.44,
+      "pigeon_version": "0.4.4"
+    },
+    {
+      "threads": 4,
+      "n": 1000000,
+      "d_bits": 256,
+      "k": 8,
+      "reps": 3,
+      "median_s": 0.2479355420000502,
+      "best_s": 0.2436022910005704,
+      "worst_s": 0.25167112499912037,
+      "subprocess_overhead_s": 0.32,
+      "pigeon_version": "0.4.4"
+    },
+    {
+      "threads": 6,
+      "n": 1000000,
+      "d_bits": 256,
+      "k": 8,
+      "reps": 3,
+      "median_s": 0.20801216700056102,
+      "best_s": 0.20318408299863222,
+      "worst_s": 0.2149055000008957,
+      "subprocess_overhead_s": 0.3,
+      "pigeon_version": "0.4.4"
+    },
+    {
+      "threads": 8,
+      "n": 1000000,
+      "d_bits": 256,
+      "k": 8,
+      "reps": 3,
+      "median_s": 0.2199960830002965,
+      "best_s": 0.21505345799960196,
+      "worst_s": 0.2211390830016171,
+      "subprocess_overhead_s": 0.31,
+      "pigeon_version": "0.4.4"
+    },
+    {
+      "threads": 10,
+      "n": 1000000,
+      "d_bits": 256,
+      "k": 8,
+      "reps": 3,
+      "median_s": 0.17796595800245996,
+      "best_s": 0.17436587499832967,
+      "worst_s": 0.17989545799719053,
+      "subprocess_overhead_s": 0.28,
+      "pigeon_version": "0.4.4"
+    }
+  ]
+}

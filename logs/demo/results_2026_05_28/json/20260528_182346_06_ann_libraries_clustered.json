@@ -1,0 +1,111 @@
+{
+  "timestamp_utc": "2026-05-28T11:23:46+00:00",
+  "preset_id": "06_ann_libraries_clustered",
+  "machine": {
+    "platform": "macOS-26.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.12.8"
+  },
+  "config": {
+    "dataset": "Synthetic \u2014 clustered (real-world shape)",
+    "n": 100000,
+    "d_bits": 256,
+    "k_values": [
+      4
+    ],
+    "methods": [
+      "pigeon \u2014 find_pairs_self (byte-aligned)",
+      "pigeon \u2014 find_pairs_self_bit (bit-aligned)",
+      "FAISS IndexBinaryFlat (brute force, exact)",
+      "FAISS IndexBinaryMultiHash (exact, nflip=0)",
+      "FAISS IndexBinaryHash (LSH, approximate)",
+      "usearch HNSW (binary, approximate)",
+      "Annoy (random projection, approximate)"
+    ],
+    "estimated_memory_mb": 252.1
+  },
+  "results": [
+    {
+      "method": "pigeon \u2014 find_pairs_self (byte-aligned)",
+      "category": "exact",
+      "time_s": 0.045488,
+      "pairs": 162111,
+      "n": 100000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {},
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "pigeon \u2014 find_pairs_self_bit (bit-aligned)",
+      "category": "exact",
+      "time_s": 0.034882,
+      "pairs": 162111,
+      "n": 100000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {},
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "FAISS IndexBinaryFlat (brute force, exact)",
+      "category": "exact",
+      "time_s": 1.536474,
+      "pairs": 162111,
+      "n": 100000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {},
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "FAISS IndexBinaryMultiHash (exact, nflip=0)",
+      "category": "exact",
+      "time_s": null,
+      "pairs": null,
+      "n": 100000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {
+        "error": "RuntimeError: Error in faiss::IndexBinaryMultiHash::IndexBinaryMultiHash(int, int, int) at /Users/runner/work/faiss/faiss/faiss/IndexBinaryHash.cpp:174: Error: 'nhash_ * b_ <= d_' failed"
+      },
+      "recall_vs_truth": 0.0
+    },
+    {
+      "method": "FAISS IndexBinaryHash (LSH, approximate)",
+      "category": "approximate-default",
+      "time_s": 0.06526,
+      "pairs": 127047,
+      "n": 100000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {},
+      "recall_vs_truth": 0.7837
+    },
+    {
+      "method": "usearch HNSW (binary, approximate)",
+      "category": "approximate-default",
+      "time_s": 2.681028,
+      "pairs": 117123,
+      "n": 100000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {},
+      "recall_vs_truth": 0.7225
+    },
+    {
+      "method": "Annoy (random projection, approximate)",
+      "category": "approximate-default",
+      "time_s": 5.583836,
+      "pairs": 89962,
+      "n": 100000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {
+        "trees": 10
+      },
+      "recall_vs_truth": 0.5549
+    }
+  ]
+}

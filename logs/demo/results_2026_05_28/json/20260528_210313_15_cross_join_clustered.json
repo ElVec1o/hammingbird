@@ -1,0 +1,184 @@
+{
+  "timestamp_utc": "2026-05-28T14:03:13+00:00",
+  "preset_id": "15_cross_join_clustered",
+  "machine": {
+    "platform": "macOS-26.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.12.8"
+  },
+  "config": {
+    "dataset": "Synthetic \u2014 clustered (real-world shape)",
+    "n_values": [
+      200000
+    ],
+    "d_bits": 256,
+    "k_values": [
+      2,
+      4
+    ],
+    "methods": [
+      "pigeon \u2014 find_pairs_cross (byte)",
+      "pigeon \u2014 find_pairs_cross_bit (bit)",
+      "FAISS IndexBinaryFlat (cross)",
+      "FAISS IndexBinaryMultiHash (cross, nflip=0)",
+      "usearch HNSW (cross, approximate)"
+    ],
+    "estimated_memory_mb": 304.1,
+    "total_elapsed_s": 8.54
+  },
+  "results": [
+    {
+      "method": "pigeon \u2014 find_pairs_cross (byte)",
+      "category": "cross-join",
+      "time_s": 0.020511,
+      "pairs": 21709,
+      "n": 200000,
+      "d_bits": 256,
+      "k": 2,
+      "extra": {
+        "n_a": 100000,
+        "n_b": 100000,
+        "mode": "cross-join"
+      },
+      "recall_vs_truth": null
+    },
+    {
+      "method": "pigeon \u2014 find_pairs_cross_bit (bit)",
+      "category": "cross-join",
+      "time_s": 0.030743,
+      "pairs": 21709,
+      "n": 200000,
+      "d_bits": 256,
+      "k": 2,
+      "extra": {
+        "n_a": 100000,
+        "n_b": 100000,
+        "mode": "cross-join"
+      },
+      "recall_vs_truth": null
+    },
+    {
+      "method": "FAISS IndexBinaryFlat (cross)",
+      "category": "cross-join",
+      "time_s": 1.481963,
+      "pairs": 21709,
+      "n": 200000,
+      "d_bits": 256,
+      "k": 2,
+      "extra": {
+        "n_a": 100000,
+        "n_b": 100000,
+        "mode": "cross-join"
+      },
+      "recall_vs_truth": null
+    },
+    {
+      "method": "FAISS IndexBinaryMultiHash (cross, nflip=0)",
+      "category": "cross-join",
+      "time_s": 0.108987,
+      "pairs": 21709,
+      "n": 200000,
+      "d_bits": 256,
+      "k": 2,
+      "extra": {
+        "n_a": 100000,
+        "n_b": 100000,
+        "mode": "cross-join",
+        "nflip": 0
+      },
+      "recall_vs_truth": null
+    },
+    {
+      "method": "usearch HNSW (cross, approximate)",
+      "category": "cross-join",
+      "time_s": 2.270381,
+      "pairs": 19112,
+      "n": 200000,
+      "d_bits": 256,
+      "k": 2,
+      "extra": {
+        "n_a": 100000,
+        "n_b": 100000,
+        "mode": "cross-join"
+      },
+      "recall_vs_truth": null
+    },
+    {
+      "method": "pigeon \u2014 find_pairs_cross (byte)",
+      "category": "cross-join",
+      "time_s": 0.125213,
+      "pairs": 324957,
+      "n": 200000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {
+        "n_a": 100000,
+        "n_b": 100000,
+        "mode": "cross-join"
+      },
+      "recall_vs_truth": null
+    },
+    {
+      "method": "pigeon \u2014 find_pairs_cross_bit (bit)",
+      "category": "cross-join",
+      "time_s": 0.1324,
+      "pairs": 324957,
+      "n": 200000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {
+        "n_a": 100000,
+        "n_b": 100000,
+        "mode": "cross-join"
+      },
+      "recall_vs_truth": null
+    },
+    {
+      "method": "FAISS IndexBinaryFlat (cross)",
+      "category": "cross-join",
+      "time_s": 1.540502,
+      "pairs": 324957,
+      "n": 200000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {
+        "n_a": 100000,
+        "n_b": 100000,
+        "mode": "cross-join"
+      },
+      "recall_vs_truth": null
+    },
+    {
+      "method": "FAISS IndexBinaryMultiHash (cross, nflip=0)",
+      "category": "cross-join",
+      "time_s": 0.236347,
+      "pairs": 324957,
+      "n": 200000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {
+        "n_a": 100000,
+        "n_b": 100000,
+        "mode": "cross-join",
+        "nflip": 0
+      },
+      "recall_vs_truth": null
+    },
+    {
+      "method": "usearch HNSW (cross, approximate)",
+      "category": "cross-join",
+      "time_s": 2.272182,
+      "pairs": 135370,
+      "n": 200000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {
+        "n_a": 100000,
+        "n_b": 100000,
+        "mode": "cross-join"
+      },
+      "recall_vs_truth": null
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "timestamp_utc": "2026-05-28T13:48:38+00:00",
+  "preset_id": "14_face_embedding_width",
+  "machine": {
+    "platform": "macOS-26.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.12.8"
+  },
+  "config": {
+    "dataset": "Synthetic \u2014 clustered (real-world shape)",
+    "n_values": [
+      100000
+    ],
+    "d_bits": 1024,
+    "k_values": [
+      2,
+      8
+    ],
+    "methods": [
+      "pigeon \u2014 find_pairs_self (byte-aligned)",
+      "pigeon \u2014 find_pairs_self_bit (bit-aligned)",
+      "FAISS IndexBinaryFlat (brute force, exact)",
+      "FAISS IndexBinaryMultiHash (exact, nflip=0)",
+      "FAISS IndexBinaryHash (LSH, approximate)",
+      "usearch HNSW (binary, approximate)"
+    ],
+    "estimated_memory_mb": 304.7,
+    "total_elapsed_s": 22.64
+  },
+  "results": [
+    {
+      "method": "pigeon \u2014 find_pairs_self (byte-aligned)",
+      "category": "exact",
+      "time_s": 0.019283,
+      "pairs": 11716,
+      "n": 100000,
+      "d_bits": 1024,
+      "k": 2,
+      "extra": {},
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "pigeon \u2014 find_pairs_self_bit (bit-aligned)",
+      "category": "exact",
+      "time_s": 0.072262,
+      "pairs": 11716,
+      "n": 100000,
+      "d_bits": 1024,
+      "k": 2,
+      "extra": {},
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "FAISS IndexBinaryFlat (brute force, exact)",
+      "category": "exact",
+      "time_s": 5.735518,
+      "pairs": 11716,
+      "n": 100000,
+      "d_bits": 1024,
+      "k": 2,
+      "extra": {},
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "FAISS IndexBinaryMultiHash (exact, nflip=0)",
+      "category": "exact",
+      "time_s": 0.1475,
+      "pairs": 11716,
+      "n": 100000,
+      "d_bits": 1024,
+      "k": 2,
+      "extra": {
+        "nflip": 0
+      },
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "FAISS IndexBinaryHash (LSH, approximate)",
+      "category": "approximate-default",
+      "time_s": 0.054981,
+      "pairs": 11432,
+      "n": 100000,
+      "d_bits": 1024,
+      "k": 2,
+      "extra": {},
+      "recall_vs_truth": 0.9758
+    },
+    {
+      "method": "usearch HNSW (binary, approximate)",
+      "category": "approximate-default",
+      "time_s": 3.55857,
+      "pairs": 10908,
+      "n": 100000,
+      "d_bits": 1024,
+      "k": 2,
+      "extra": {},
+      "recall_vs_truth": 0.931
+    },
+    {
+      "method": "pigeon \u2014 find_pairs_self (byte-aligned)",
+      "category": "exact",
+      "time_s": 0.234202,
+      "pairs": 1758371,
+      "n": 100000,
+      "d_bits": 1024,
+      "k": 8,
+      "extra": {},
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "pigeon \u2014 find_pairs_self_bit (bit-aligned)",
+      "category": "exact",
+      "time_s": 0.234454,
+      "pairs": 1758371,
+      "n": 100000,
+      "d_bits": 1024,
+      "k": 8,
+      "extra": {},
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "FAISS IndexBinaryFlat (brute force, exact)",
+      "category": "exact",
+      "time_s": 6.181528,
+      "pairs": 1758371,
+      "n": 100000,
+      "d_bits": 1024,
+      "k": 8,
+      "extra": {},
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "FAISS IndexBinaryMultiHash (exact, nflip=0)",
+      "category": "exact",
+      "time_s": 0.806506,
+      "pairs": 1758371,
+      "n": 100000,
+      "d_bits": 1024,
+      "k": 8,
+      "extra": {
+        "nflip": 0
+      },
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "FAISS IndexBinaryHash (LSH, approximate)",
+      "category": "approximate-default",
+      "time_s": 0.438989,
+      "pairs": 1589631,
+      "n": 100000,
+      "d_bits": 1024,
+      "k": 8,
+      "extra": {},
+      "recall_vs_truth": 0.904
+    },
+    {
+      "method": "usearch HNSW (binary, approximate)",
+      "category": "approximate-default",
+      "time_s": 3.594438,
+      "pairs": 406414,
+      "n": 100000,
+      "d_bits": 1024,
+      "k": 8,
+      "extra": {},
+      "recall_vs_truth": 0.2311
+    }
+  ]
+}

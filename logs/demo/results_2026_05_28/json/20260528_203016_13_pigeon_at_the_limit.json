@@ -1,0 +1,73 @@
+{
+  "timestamp_utc": "2026-05-28T13:30:16+00:00",
+  "preset_id": "13_pigeon_at_the_limit",
+  "machine": {
+    "platform": "macOS-26.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.12.8"
+  },
+  "config": {
+    "dataset": "Synthetic \u2014 uniform random",
+    "n_values": [
+      5000000,
+      10000000
+    ],
+    "d_bits": 256,
+    "k_values": [
+      2
+    ],
+    "methods": [
+      "pigeon \u2014 find_pairs_self (byte-aligned)",
+      "pigeon \u2014 find_pairs_self_bit (bit-aligned)"
+    ],
+    "estimated_memory_mb": 1220.4,
+    "total_elapsed_s": 4.24
+  },
+  "results": [
+    {
+      "method": "pigeon \u2014 find_pairs_self (byte-aligned)",
+      "category": "exact",
+      "time_s": 0.581957,
+      "pairs": 0,
+      "n": 5000000,
+      "d_bits": 256,
+      "k": 2,
+      "extra": {},
+      "recall_vs_truth": null
+    },
+    {
+      "method": "pigeon \u2014 find_pairs_self_bit (bit-aligned)",
+      "category": "exact",
+      "time_s": 0.625041,
+      "pairs": 0,
+      "n": 5000000,
+      "d_bits": 256,
+      "k": 2,
+      "extra": {},
+      "recall_vs_truth": null
+    },
+    {
+      "method": "pigeon \u2014 find_pairs_self (byte-aligned)",
+      "category": "exact",
+      "time_s": 1.382218,
+      "pairs": 0,
+      "n": 10000000,
+      "d_bits": 256,
+      "k": 2,
+      "extra": {},
+      "recall_vs_truth": null
+    },
+    {
+      "method": "pigeon \u2014 find_pairs_self_bit (bit-aligned)",
+      "category": "exact",
+      "time_s": 1.320422,
+      "pairs": 0,
+      "n": 10000000,
+      "d_bits": 256,
+      "k": 2,
+      "extra": {},
+      "recall_vs_truth": null
+    }
+  ]
+}

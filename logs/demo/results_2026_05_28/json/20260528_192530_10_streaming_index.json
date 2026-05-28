@@ -1,0 +1,86 @@
+{
+  "timestamp_utc": "2026-05-28T12:25:30+00:00",
+  "preset_id": "10_streaming_index",
+  "machine": {
+    "platform": "macOS-26.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.12.8"
+  },
+  "config": {
+    "dataset": "Synthetic \u2014 clustered (real-world shape)",
+    "n_values": [
+      100000
+    ],
+    "d_bits": 256,
+    "k_values": [
+      2
+    ],
+    "methods": [
+      "pigeon Index (streaming query latency)",
+      "FAISS Flat (streaming query latency)",
+      "usearch HNSW (streaming query latency)"
+    ],
+    "estimated_memory_mb": 223.5,
+    "total_elapsed_s": 1.78
+  },
+  "results": [
+    {
+      "method": "pigeon Index (streaming query latency)",
+      "category": "streaming-index",
+      "time_s": 0.000606,
+      "pairs": 0,
+      "n": 100000,
+      "d_bits": 256,
+      "k": 2,
+      "extra": {
+        "mode": "index_query",
+        "build_s": 0.02,
+        "n_queries": 1000,
+        "median_us": 0.21,
+        "mean_us": 0.5,
+        "p99_us": 5.88,
+        "min_us": 0.17
+      },
+      "recall_vs_truth": null
+    },
+    {
+      "method": "FAISS Flat (streaming query latency)",
+      "category": "streaming-index",
+      "time_s": 0.194653,
+      "pairs": 0,
+      "n": 100000,
+      "d_bits": 256,
+      "k": 2,
+      "extra": {
+        "mode": "index_query",
+        "build_s": 0.0,
+        "n_queries": 1000,
+        "median_us": 194.0,
+        "mean_us": 194.17,
+        "p99_us": 330.54,
+        "min_us": 136.92
+      },
+      "recall_vs_truth": null
+    },
+    {
+      "method": "usearch HNSW (streaming query latency)",
+      "category": "streaming-index",
+      "time_s": 0.041014,
+      "pairs": 0,
+      "n": 100000,
+      "d_bits": 256,
+      "k": 2,
+      "extra": {
+        "mode": "index_query",
+        "build_s": 1.354,
+        "n_queries": 1000,
+        "median_us": 41.17,
+        "mean_us": 40.86,
+        "p99_us": 75.88,
+        "min_us": 16.29
+      },
+      "recall_vs_truth": null
+    }
+  ]
+}

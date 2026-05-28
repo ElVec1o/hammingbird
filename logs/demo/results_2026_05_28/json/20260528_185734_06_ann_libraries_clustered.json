@@ -1,0 +1,114 @@
+{
+  "timestamp_utc": "2026-05-28T11:57:34+00:00",
+  "preset_id": "06_ann_libraries_clustered",
+  "machine": {
+    "platform": "macOS-26.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.12.8"
+  },
+  "config": {
+    "dataset": "Synthetic \u2014 clustered (real-world shape)",
+    "n_values": [
+      100000
+    ],
+    "d_bits": 256,
+    "k_values": [
+      4
+    ],
+    "methods": [
+      "pigeon \u2014 find_pairs_self (byte-aligned)",
+      "pigeon \u2014 find_pairs_self_bit (bit-aligned)",
+      "FAISS IndexBinaryFlat (brute force, exact)",
+      "FAISS IndexBinaryMultiHash (exact, nflip=0)",
+      "FAISS IndexBinaryHash (LSH, approximate)",
+      "usearch HNSW (binary, approximate)",
+      "Annoy (random projection, approximate)"
+    ],
+    "estimated_memory_mb": 252.1,
+    "total_elapsed_s": 11.33
+  },
+  "results": [
+    {
+      "method": "pigeon \u2014 find_pairs_self (byte-aligned)",
+      "category": "exact",
+      "time_s": 0.04066,
+      "pairs": 162111,
+      "n": 100000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {},
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "pigeon \u2014 find_pairs_self_bit (bit-aligned)",
+      "category": "exact",
+      "time_s": 0.03455,
+      "pairs": 162111,
+      "n": 100000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {},
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "FAISS IndexBinaryFlat (brute force, exact)",
+      "category": "exact",
+      "time_s": 1.559765,
+      "pairs": 162111,
+      "n": 100000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {},
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "FAISS IndexBinaryMultiHash (exact, nflip=0)",
+      "category": "exact",
+      "time_s": 0.232911,
+      "pairs": 162111,
+      "n": 100000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {
+        "nflip": 0
+      },
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "FAISS IndexBinaryHash (LSH, approximate)",
+      "category": "approximate-default",
+      "time_s": 0.061409,
+      "pairs": 127047,
+      "n": 100000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {},
+      "recall_vs_truth": 0.7837
+    },
+    {
+      "method": "usearch HNSW (binary, approximate)",
+      "category": "approximate-default",
+      "time_s": 2.716791,
+      "pairs": 117076,
+      "n": 100000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {},
+      "recall_vs_truth": 0.7222
+    },
+    {
+      "method": "Annoy (random projection, approximate)",
+      "category": "approximate-default",
+      "time_s": 6.407301,
+      "pairs": 90608,
+      "n": 100000,
+      "d_bits": 256,
+      "k": 4,
+      "extra": {
+        "trees": 10
+      },
+      "recall_vs_truth": 0.5589
+    }
+  ]
+}

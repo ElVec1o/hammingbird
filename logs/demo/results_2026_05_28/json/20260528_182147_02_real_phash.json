@@ -1,0 +1,170 @@
+{
+  "timestamp_utc": "2026-05-28T11:21:47+00:00",
+  "preset_id": "02_real_phash",
+  "machine": {
+    "platform": "macOS-26.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.12.8"
+  },
+  "config": {
+    "dataset": "Real \u2014 CIFAR-10 pHashes (64-bit, fixed)",
+    "n": 50000,
+    "d_bits": 64,
+    "k_values": [
+      2,
+      4
+    ],
+    "methods": [
+      "pigeon \u2014 find_pairs_self (byte-aligned)",
+      "pigeon \u2014 find_pairs_self_bit (bit-aligned)",
+      "FAISS IndexBinaryFlat (brute force, exact)",
+      "FAISS IndexBinaryMultiHash (exact, nflip=0)",
+      "usearch HNSW (binary, approximate)",
+      "Annoy (random projection, approximate)"
+    ],
+    "estimated_memory_mb": 223.7
+  },
+  "results": [
+    {
+      "method": "pigeon \u2014 find_pairs_self (byte-aligned)",
+      "category": "exact",
+      "time_s": 0.01115,
+      "pairs": 110,
+      "n": 50000,
+      "d_bits": 64,
+      "k": 2,
+      "extra": {},
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "pigeon \u2014 find_pairs_self_bit (bit-aligned)",
+      "category": "exact",
+      "time_s": 0.005061,
+      "pairs": 110,
+      "n": 50000,
+      "d_bits": 64,
+      "k": 2,
+      "extra": {},
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "FAISS IndexBinaryFlat (brute force, exact)",
+      "category": "exact",
+      "time_s": 0.290408,
+      "pairs": 110,
+      "n": 50000,
+      "d_bits": 64,
+      "k": 2,
+      "extra": {},
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "FAISS IndexBinaryMultiHash (exact, nflip=0)",
+      "category": "exact",
+      "time_s": 0.035574,
+      "pairs": 110,
+      "n": 50000,
+      "d_bits": 64,
+      "k": 2,
+      "extra": {
+        "nflip": 0
+      },
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "usearch HNSW (binary, approximate)",
+      "category": "approximate-default",
+      "time_s": 1.262538,
+      "pairs": 110,
+      "n": 50000,
+      "d_bits": 64,
+      "k": 2,
+      "extra": {},
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "Annoy (random projection, approximate)",
+      "category": "approximate-default",
+      "time_s": 3.938182,
+      "pairs": 110,
+      "n": 50000,
+      "d_bits": 64,
+      "k": 2,
+      "extra": {
+        "trees": 10
+      },
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "pigeon \u2014 find_pairs_self (byte-aligned)",
+      "category": "exact",
+      "time_s": 0.039644,
+      "pairs": 277,
+      "n": 50000,
+      "d_bits": 64,
+      "k": 4,
+      "extra": {},
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "pigeon \u2014 find_pairs_self_bit (bit-aligned)",
+      "category": "exact",
+      "time_s": 0.006957,
+      "pairs": 277,
+      "n": 50000,
+      "d_bits": 64,
+      "k": 4,
+      "extra": {},
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "FAISS IndexBinaryFlat (brute force, exact)",
+      "category": "exact",
+      "time_s": 0.271357,
+      "pairs": 277,
+      "n": 50000,
+      "d_bits": 64,
+      "k": 4,
+      "extra": {},
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "FAISS IndexBinaryMultiHash (exact, nflip=0)",
+      "category": "exact",
+      "time_s": null,
+      "pairs": null,
+      "n": 50000,
+      "d_bits": 64,
+      "k": 4,
+      "extra": {
+        "error": "RuntimeError: Error in faiss::IndexBinaryMultiHash::IndexBinaryMultiHash(int, int, int) at /Users/runner/work/faiss/faiss/faiss/IndexBinaryHash.cpp:174: Error: 'nhash_ * b_ <= d_' failed"
+      },
+      "recall_vs_truth": 0.0
+    },
+    {
+      "method": "usearch HNSW (binary, approximate)",
+      "category": "approximate-default",
+      "time_s": 1.265131,
+      "pairs": 277,
+      "n": 50000,
+      "d_bits": 64,
+      "k": 4,
+      "extra": {},
+      "recall_vs_truth": 1.0
+    },
+    {
+      "method": "Annoy (random projection, approximate)",
+      "category": "approximate-default",
+      "time_s": 3.962865,
+      "pairs": 277,
+      "n": 50000,
+      "d_bits": 64,
+      "k": 4,
+      "extra": {
+        "trees": 10
+      },
+      "recall_vs_truth": 1.0
+    }
+  ]
+}
