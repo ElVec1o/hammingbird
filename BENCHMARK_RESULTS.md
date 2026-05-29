@@ -254,3 +254,17 @@ values, since the rayon pool is initialized once per process.
 
 This is the honest pitch. Take it into a customer conversation with
 confidence; you don't need to hide anything.
+
+---
+
+## AI disclosure
+
+This project — including the benchmarking methodology, the demo, and
+this report — was developed with significant assistance from
+Anthropic's Claude. All design decisions and final benchmark runs are
+mine; the AI was a collaborator for code review, refactoring,
+documentation, and surfacing failure modes. Every number in this
+document has a JSON receipt at `logs/demo/results_2026_05_28/json/`
+that you can reproduce on your own hardware via
+`streamlit run code/demo/app.py` — the proof is reproducibility, not
+authorship.

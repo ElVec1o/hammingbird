@@ -64,6 +64,19 @@ reproducible): **https://github.com/ElVec1o/hammingbird/blob/main/BENCHMARK_RESU
 
 MIT © 2026 Vico Bonfioli.
 
+## AI disclosure
+
+This project was built with significant assistance from Anthropic's
+Claude across architecture, implementation, benchmarking, and
+documentation. All design decisions are mine; the AI was a collaborator
+for code review, refactoring, exploring algorithmic alternatives,
+drafting docs, and surfacing failure modes. The proof of the project's
+quality lives in the reproducibility, not the authorship — every
+benchmark number has a JSON receipt in the repo reproducible on your
+own hardware via the demo. Rust source is auditable; the algorithm is
+published (Norouzi 2012); 33 unit tests + a Python reference
+implementation cover correctness.
+
 ## Source / issues / docs
 
 https://github.com/ElVec1o/hammingbird
